@@ -13,15 +13,20 @@
 
         body {
             background-color: rgb(102, 98, 109);
-            display: flex;
+        }
+
+        div {
+            background-color: rgb(255, 233, 125);
+            height: 100%;
+            width: 75%;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         article {
             font-family: 'Open Sans', sans-serif;
             background-color: rgb(255, 233, 125);
             padding: 0.5em;
-            margin: 0 auto;
-            width: 55%;
         }
 
         p {
@@ -38,146 +43,163 @@
         span.highlighted {
             background-position: -100%
         }
+
+        @media screen and (max-width: 900px) {
+            div {
+                width: initial;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1.3em;
+            }
+        }
     </style>
 </head>
 <body>
 <audio id="excerpt" src="99Pi%20Excerpt.mp3"></audio>
-<article>
-    <p>
-        <span class="cue-position-0">This </span>
-        <span class="cue-position-1">is </span>
-        <span class="cue-position-2">99% </span>
-        <span class="cue-position-3">invisible, </span>
-        <span class="cue-position-4">I&#39;m </span>
-        <span class="cue-position-5">Roman </span>
-        <span class="cue-position-6">Mars. </span>
-    </p>
-    <h1>
-        <span class="cue-position-7">The </span>
-        <span class="cue-position-8">five </span>
-        <span class="cue-position-9">basic </span>
-        <span class="cue-position-10">principles </span>
-        <span class="cue-position-11">of </span>
-        <span class="cue-position-12">flag </span>
-        <span class="cue-position-13">design </span>
-    </h1>
-    <p>
-        <span class="cue-position-7">The </span>
-        <span class="cue-position-8">five </span>
-        <span class="cue-position-9">basic </span>
-        <span class="cue-position-10">principles </span>
-        <span class="cue-position-11">of </span>
-        <span class="cue-position-12">flag </span>
-        <span class="cue-position-13">design </span>
-        <span class="cue-position-14">according </span>
-        <span class="cue-position-15">to the </span>
-        <span class="cue-position-16">North American </span>
-        <span class="cue-position-17">Vexillological </span>
-        <span class="cue-position-19">(Vex-</span><span class="cue-position-20">illo-</span><span class="cue-position-21">logical. </span>
-        <span class="cue-position-26">It&#39;s the </span>
-        <span class="cue-position-27">extra </span>
-        <span class="cue-position-28">&#39;lol&#39; </span>
-        <span class="cue-position-29">that makes </span>
-        <span class="cue-position-30">it sound </span>
-        <span class="cue-position-31">weird) </span>
-        <span class="cue-position-18">Association. </span>
-        <span class="cue-position-22">Vexillology </span>
-        <span class="cue-position-23">is the </span>
-        <span class="cue-position-24">study of </span>
-        <span class="cue-position-25">flags. </span>
-    </p>
-    <h1>
-        <span class="cue-position-32">Number </span>
-        <span class="cue-position-33">one. </span>
-        <span class="cue-position-34">Keep </span>
-        <span class="cue-position-35">it simple. </span>
-    </h1>
-    <p>
-        <span class="cue-position-36">The flag </span>
-        <span class="cue-position-37">should be </span>
-        <span class="cue-position-38">so simple </span>
-        <span class="cue-position-39">that a </span>
-        <span class="cue-position-40">child </span>
-        <span class="cue-position-41">can draw it </span>
-        <span class="cue-position-42">from memory. </span>
-        <span class="cue-position-43">Before I </span>
-        <span class="cue-position-44">moved to </span>
-        <span class="cue-position-45">Chicago, </span>
-        <span class="cue-position-46">in 2005, </span>
-        <span class="cue-position-47">I didn&#39;t </span>
-        <span class="cue-position-48">even </span>
-        <span class="cue-position-49">know cities </span>
-        <span class="cue-position-50">had </span>
-        <span class="cue-position-51">their own </span>
-        <span class="cue-position-52">flags. </span>
-        <span class="cue-position-53">&quot;Most </span>
-        <span class="cue-position-54">larger </span>
-        <span class="cue-position-55">cities </span>
-        <span class="cue-position-56">have </span>
-        <span class="cue-position-57">flags.&quot; </span>
-        <span class="cue-position-58">Well I didn&#39;t </span>
-        <span class="cue-position-59">know that. </span>
-        <span class="cue-position-60">That&#39;s Ted K., </span>
-        <span class="cue-position-61">by the way, </span>
-        <span class="cue-position-62">flag expert, </span>
-        <span class="cue-position-63">totally awesome </span>
-        <span class="cue-position-64">guy. </span>
-        <span class="cue-position-65">&quot;I&#39;m </span>
-        <span class="cue-position-66">the editor </span>
-        <span class="cue-position-67">of </span>
-        <span class="cue-position-68">a </span>
-        <span class="cue-position-69">scholarly </span>
-        <span class="cue-position-70">journal </span>
-        <span class="cue-position-71">on </span>
-        <span class="cue-position-72">flags </span>
-        <span class="cue-position-73">called </span>
-        <span class="cue-position-74">&#39;Raven: </span>
-        <span class="cue-position-75">A </span>
-        <span class="cue-position-76">Journal </span>
-        <span class="cue-position-77">of Vexillology&#39;&quot; </span>
-        <span class="cue-position-78">And that </span>
-        <span class="cue-position-79">first city flag </span>
-        <span class="cue-position-80">I discovered in Chicago </span>
-        <span class="cue-position-81">is a beaut: </span>
-        <span class="cue-position-82">a white </span>
-        <span class="cue-position-83">field, </span>
-        <span class="cue-position-84">two light </span>
-        <span class="cue-position-85">blue </span>
-        <span class="cue-position-86">horizontal </span>
-        <span class="cue-position-87">stripes, </span>
-        <span class="cue-position-88">and </span>
-        <span class="cue-position-89">four </span>
-        <span class="cue-position-90">six-pointed </span>
-        <span class="cue-position-91">red </span>
-        <span class="cue-position-92">stars </span>
-        <span class="cue-position-93">across </span>
-        <span class="cue-position-94">the middle. </span>
-    </p>
-    <h1>
-        <span class="cue-position-95">Number </span>
-        <span class="cue-position-96">two: </span>
-        <span class="cue-position-103">Use </span>
-        <span class="cue-position-104">meaningful </span>
-        <span class="cue-position-105">symbolism. </span>
-    </h1>
-    <p>
-        <span class="cue-position-97">The </span>
-        <span class="cue-position-98">blue </span>
-        <span class="cue-position-99">stripes </span>
-        <span class="cue-position-100">represent </span>
-        <span class="cue-position-101">the water, </span>
-        <span class="cue-position-102">the lake, and the rivers. </span>
-        <span class="cue-position-106">The </span>
-        <span class="cue-position-107">red </span>
-        <span class="cue-position-108">stars </span>
-        <span class="cue-position-109">represent </span>
-        <span class="cue-position-110">significant </span>
-        <span class="cue-position-111">events </span>
-        <span class="cue-position-112">in </span>
-        <span class="cue-position-113">Chicago&#39;s </span>
-        <span class="cue-position-114">history. </span>
-    </p>
-</article>
+<div>
+    <article>
+        <p>
+            <span class="cue-position-0">This </span>
+            <span class="cue-position-1">is </span>
+            <span class="cue-position-2">99% </span>
+            <span class="cue-position-3">invisible, </span>
+            <span class="cue-position-4">I&#39;m </span>
+            <span class="cue-position-5">Roman </span>
+            <span class="cue-position-6">Mars. </span>
+        </p>
+        <h1>
+            <span class="cue-position-7">The </span>
+            <span class="cue-position-8">five </span>
+            <span class="cue-position-9">basic </span>
+            <span class="cue-position-10">principles </span>
+            <span class="cue-position-11">of </span>
+            <span class="cue-position-12">flag </span>
+            <span class="cue-position-13">design </span>
+        </h1>
+        <p>
+            <span class="cue-position-7">The </span>
+            <span class="cue-position-8">five </span>
+            <span class="cue-position-9">basic </span>
+            <span class="cue-position-10">principles </span>
+            <span class="cue-position-11">of </span>
+            <span class="cue-position-12">flag </span>
+            <span class="cue-position-13">design </span>
+            <span class="cue-position-14">according </span>
+            <span class="cue-position-15">to the </span>
+            <span class="cue-position-16">North American </span>
+            <span class="cue-position-17">Vexillological </span>
+            <span class="cue-position-19">(Vex-</span><span class="cue-position-20">illo-</span><span
+                class="cue-position-21">logical. </span>
+            <span class="cue-position-26">It&#39;s the </span>
+            <span class="cue-position-27">extra </span>
+            <span class="cue-position-28">&#39;lol&#39; </span>
+            <span class="cue-position-29">that makes </span>
+            <span class="cue-position-30">it sound </span>
+            <span class="cue-position-31">weird) </span>
+            <span class="cue-position-18">Association. </span>
+            <span class="cue-position-22">Vexillology </span>
+            <span class="cue-position-23">is the </span>
+            <span class="cue-position-24">study of </span>
+            <span class="cue-position-25">flags. </span>
+        </p>
+        <h1>
+            <span class="cue-position-32">Number </span>
+            <span class="cue-position-33">one. </span>
+            <span class="cue-position-34">Keep </span>
+            <span class="cue-position-35">it simple. </span>
+        </h1>
+        <p>
+            <span class="cue-position-36">The flag </span>
+            <span class="cue-position-37">should be </span>
+            <span class="cue-position-38">so simple </span>
+            <span class="cue-position-39">that a </span>
+            <span class="cue-position-40">child </span>
+            <span class="cue-position-41">can draw it </span>
+            <span class="cue-position-42">from memory. </span>
+            <span class="cue-position-43">Before I </span>
+            <span class="cue-position-44">moved to </span>
+            <span class="cue-position-45">Chicago, </span>
+            <span class="cue-position-46">in 2005, </span>
+            <span class="cue-position-47">I didn&#39;t </span>
+            <span class="cue-position-48">even </span>
+            <span class="cue-position-49">know cities </span>
+            <span class="cue-position-50">had </span>
+            <span class="cue-position-51">their own </span>
+            <span class="cue-position-52">flags. </span>
+            <span class="cue-position-53">&quot;Most </span>
+            <span class="cue-position-54">larger </span>
+            <span class="cue-position-55">cities </span>
+            <span class="cue-position-56">have </span>
+            <span class="cue-position-57">flags.&quot; </span>
+            <span class="cue-position-58">Well I didn&#39;t </span>
+            <span class="cue-position-59">know that. </span>
+            <span class="cue-position-60">That&#39;s Ted K., </span>
+            <span class="cue-position-61">by the way, </span>
+            <span class="cue-position-62">flag expert, </span>
+            <span class="cue-position-63">totally awesome </span>
+            <span class="cue-position-64">guy. </span>
+            <span class="cue-position-65">&quot;I&#39;m </span>
+            <span class="cue-position-66">the editor </span>
+            <span class="cue-position-67">of </span>
+            <span class="cue-position-68">a </span>
+            <span class="cue-position-69">scholarly </span>
+            <span class="cue-position-70">journal </span>
+            <span class="cue-position-71">on </span>
+            <span class="cue-position-72">flags </span>
+            <span class="cue-position-73">called </span>
+            <span class="cue-position-74">&#39;Raven: </span>
+            <span class="cue-position-75">A </span>
+            <span class="cue-position-76">Journal </span>
+            <span class="cue-position-77">of Vexillology&#39;&quot; </span>
+            <span class="cue-position-78">And that </span>
+            <span class="cue-position-79">first city flag </span>
+            <span class="cue-position-80">I discovered in Chicago </span>
+            <span class="cue-position-81">is a beaut: </span>
+            <span class="cue-position-82">a white </span>
+            <span class="cue-position-83">field, </span>
+            <span class="cue-position-84">two light </span>
+            <span class="cue-position-85">blue </span>
+            <span class="cue-position-86">horizontal </span>
+            <span class="cue-position-87">stripes, </span>
+            <span class="cue-position-88">and </span>
+            <span class="cue-position-89">four </span>
+            <span class="cue-position-90">six-pointed </span>
+            <span class="cue-position-91">red </span>
+            <span class="cue-position-92">stars </span>
+            <span class="cue-position-93">across </span>
+            <span class="cue-position-94">the middle. </span>
+        </p>
+        <h1>
+            <span class="cue-position-95">Number </span>
+            <span class="cue-position-96">two: </span>
+            <span class="cue-position-103">Use </span>
+            <span class="cue-position-104">meaningful </span>
+            <span class="cue-position-105">symbolism. </span>
+        </h1>
+        <p>
+            <span class="cue-position-97">The </span>
+            <span class="cue-position-98">blue </span>
+            <span class="cue-position-99">stripes </span>
+            <span class="cue-position-100">represent </span>
+            <span class="cue-position-101">the water, </span>
+            <span class="cue-position-102">the lake, and the rivers. </span>
+            <span class="cue-position-106">The </span>
+            <span class="cue-position-107">red </span>
+            <span class="cue-position-108">stars </span>
+            <span class="cue-position-109">represent </span>
+            <span class="cue-position-110">significant </span>
+            <span class="cue-position-111">events </span>
+            <span class="cue-position-112">in </span>
+            <span class="cue-position-113">Chicago&#39;s </span>
+            <span class="cue-position-114">history. </span>
+        </p>
+    </article>
+</div>
 <script src="bling.js"></script>
 <script src="script.js"></script>
 </body>
