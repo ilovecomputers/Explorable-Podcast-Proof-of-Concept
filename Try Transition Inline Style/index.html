@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try Transition Inline Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.css">
+    <style>
+        h1 {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, .12) 50%);
+            background-size: 200%;
+            transition: background .4s;
+        }
+
+        div:hover h1 {
+            background-position: -100%;
+        }
+    </style>
+</head>
+<body>
+<div><h1>1 second transition</h1>
+    <h1 style="transition: background 2s">2 second transition</h1></div>
+</body>
+</html>
