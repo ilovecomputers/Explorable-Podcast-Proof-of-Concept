@@ -1,0 +1,367 @@
+var transcriptCuesTrack = [{
+	cueTime: 0.33,
+	cuePositionName: "0"
+}, {
+	cueTime: 0.57,
+	cuePositionName: "1"
+}, {
+	cueTime: 0.71,
+	cuePositionName: "2"
+}, {
+	cueTime: 1.38,
+	cuePositionName: "3"
+}, {
+	cueTime: 2.17,
+	cuePositionName: "4"
+}, {
+	cueTime: 2.36,
+	cuePositionName: "5"
+}, {
+	cueTime: 2.64,
+	cuePositionName: "6"
+}, {
+	cueTime: 3.88,
+	cuePositionName: "7"
+}, {
+	cueTime: 4.02,
+	cuePositionName: "8"
+}, {
+	cueTime: 4.32,
+	cuePositionName: "9"
+}, {
+	cueTime: 4.65,
+	cuePositionName: "10"
+}, {
+	cueTime: 5.1,
+	cuePositionName: "11"
+}, {
+	cueTime: 5.27,
+	cuePositionName: "12"
+}, {
+	cueTime: 5.52,
+	cuePositionName: "13"
+}, {
+	cueTime: 5.92,
+	cuePositionName: "14"
+}, {
+	cueTime: 6.28,
+	cuePositionName: "15"
+}, {
+	cueTime: 6.55,
+	cuePositionName: "16"
+}, {
+	cueTime: 7.37,
+	cuePositionName: "17"
+}, {
+	cueTime: 8.62,
+	cuePositionName: "18"
+}, {
+	cueTime: 9.48,
+	cuePositionName: "19"
+}, {
+	cueTime: 10.09,
+	cuePositionName: "20"
+}, {
+	cueTime: 10.36,
+	cuePositionName: "21"
+}, {
+	cueTime: 11.01,
+	cuePositionName: "22"
+}, {
+	cueTime: 11.82,
+	cuePositionName: "23"
+}, {
+	cueTime: 12.32,
+	cuePositionName: "24"
+}, {
+	cueTime: 13.15,
+	cuePositionName: "25"
+}, {
+	cueTime: 13.72,
+	cuePositionName: "26"
+}, {
+	cueTime: 14.01,
+	cuePositionName: "27"
+}, {
+	cueTime: 14.19,
+	cuePositionName: "28"
+}, {
+	cueTime: 14.65,
+	cuePositionName: "29"
+}, {
+	cueTime: 15.03,
+	cuePositionName: "30"
+}, {
+	cueTime: 15.37,
+	cuePositionName: "31"
+}, {
+	cueTime: 15.72,
+	cuePositionName: "32"
+}, {
+	cueTime: 16.14,
+	cuePositionName: "33"
+}, {
+	cueTime: 16.44,
+	cuePositionName: "34"
+}, {
+	cueTime: 16.74,
+	cuePositionName: "35"
+}, {
+	cueTime: 17.53,
+	cuePositionName: "36"
+}, {
+	cueTime: 17.91,
+	cuePositionName: "37"
+}, {
+	cueTime: 18.23,
+	cuePositionName: "38"
+}, {
+	cueTime: 18.9,
+	cuePositionName: "39"
+}, {
+	cueTime: 19.16,
+	cuePositionName: "40"
+}, {
+	cueTime: 19.52,
+	cuePositionName: "41"
+}, {
+	cueTime: 20.02,
+	cuePositionName: "42"
+}, {
+	cueTime: 21.29,
+	cuePositionName: "43"
+}, {
+	cueTime: 21.65,
+	cuePositionName: "44"
+}, {
+	cueTime: 21.94,
+	cuePositionName: "45"
+}, {
+	cueTime: 22.46,
+	cuePositionName: "46"
+}, {
+	cueTime: 23.28,
+	cuePositionName: "47"
+}, {
+	cueTime: 23.63,
+	cuePositionName: "48"
+}, {
+	cueTime: 23.88,
+	cuePositionName: "49"
+}, {
+	cueTime: 24.46,
+	cuePositionName: "50"
+}, {
+	cueTime: 24.75,
+	cuePositionName: "51"
+}, {
+	cueTime: 25.09,
+	cuePositionName: "52"
+}, {
+	cueTime: 25.59,
+	cuePositionName: "53"
+}, {
+	cueTime: 26.0,
+	cuePositionName: "54"
+}, {
+	cueTime: 26.48,
+	cuePositionName: "55"
+}, {
+	cueTime: 26.96,
+	cuePositionName: "56"
+}, {
+	cueTime: 27.26,
+	cuePositionName: "57"
+}, {
+	cueTime: 27.77,
+	cuePositionName: "58"
+}, {
+	cueTime: 28.21,
+	cuePositionName: "59"
+}, {
+	cueTime: 28.74,
+	cuePositionName: "60"
+}, {
+	cueTime: 29.58,
+	cuePositionName: "61"
+}, {
+	cueTime: 30.8,
+	cuePositionName: "62"
+}, {
+	cueTime: 31.58,
+	cuePositionName: "63"
+}, {
+	cueTime: 32.4,
+	cuePositionName: "64"
+}, {
+	cueTime: 32.77,
+	cuePositionName: "65"
+}, {
+	cueTime: 33.09,
+	cuePositionName: "66"
+}, {
+	cueTime: 33.82,
+	cuePositionName: "67"
+}, {
+	cueTime: 34.44,
+	cuePositionName: "68"
+}, {
+	cueTime: 34.68,
+	cuePositionName: "69"
+}, {
+	cueTime: 35.39,
+	cuePositionName: "70"
+}, {
+	cueTime: 35.89,
+	cuePositionName: "71"
+}, {
+	cueTime: 36.28,
+	cuePositionName: "72"
+}, {
+	cueTime: 37.03,
+	cuePositionName: "73"
+}, {
+	cueTime: 37.47,
+	cuePositionName: "74"
+}, {
+	cueTime: 37.97,
+	cuePositionName: "75"
+}, {
+	cueTime: 38.23,
+	cuePositionName: "76"
+}, {
+	cueTime: 38.63,
+	cuePositionName: "77"
+}, {
+	cueTime: 39.92,
+	cuePositionName: "78"
+}, {
+	cueTime: 40.18,
+	cuePositionName: "79"
+}, {
+	cueTime: 41.08,
+	cuePositionName: "80"
+}, {
+	cueTime: 42.11,
+	cuePositionName: "81"
+}, {
+	cueTime: 43.16,
+	cuePositionName: "82"
+}, {
+	cueTime: 43.16,
+	cuePositionName: "flag"
+}, {
+	cueTime: 43.64,
+	cuePositionName: "83"
+}, {
+	cueTime: 44.27,
+	cuePositionName: "84"
+}, {
+	cueTime: 44.37,
+	cuePositionName: "topWipe"
+}, {
+	cueTime: 45.1,
+	cuePositionName: "85"
+}, {
+	cueTime: 45.14,
+	cuePositionName: "bottomWipe"
+}, {
+	cueTime: 45.45,
+	cuePositionName: "86"
+}, {
+	cueTime: 46.09,
+	cuePositionName: "87"
+}, {
+	cueTime: 46.6,
+	cuePositionName: "88"
+}, {
+	cueTime: 46.87,
+	cuePositionName: "89"
+}, {
+	cueTime: 47.23,
+	cuePositionName: "90"
+}, {
+	cueTime: 48.06,
+	cuePositionName: "91"
+}, {
+	cueTime: 48.37,
+	cuePositionName: "92"
+}, {
+	cueTime: 48.91,
+	cuePositionName: "93"
+}, {
+	cueTime: 49,
+	cuePositionName: "firstStar"
+}, {
+	cueTime: 49.25,
+	cuePositionName: "secondStar"
+}, {
+	cueTime: 49.32,
+	cuePositionName: "94"
+}, {
+	cueTime: 49.50,
+	cuePositionName: "thirdStar"
+}, {
+	cueTime: 49.75,
+	cuePositionName: "fourthStar"
+}, {
+	cueTime: 49.76,
+	cuePositionName: "95"
+}, {
+	cueTime: 50.16,
+	cuePositionName: "96"
+}, {
+	cueTime: 50.52,
+	cuePositionName: "97"
+}, {
+	cueTime: 50.76,
+	cuePositionName: "98"
+}, {
+	cueTime: 51.04,
+	cuePositionName: "99"
+}, {
+	cueTime: 51.7,
+	cuePositionName: "100"
+}, {
+	cueTime: 52.44,
+	cuePositionName: "101"
+}, {
+	cueTime: 53.38,
+	cuePositionName: "102"
+}, {
+	cueTime: 54.3,
+	cuePositionName: "103"
+}, {
+	cueTime: 54.58,
+	cuePositionName: "104"
+}, {
+	cueTime: 55.04,
+	cuePositionName: "105"
+}, {
+	cueTime: 55.71,
+	cuePositionName: "106"
+}, {
+	cueTime: 56.16,
+	cuePositionName: "107"
+}, {
+	cueTime: 56.49,
+	cuePositionName: "108"
+}, {
+	cueTime: 57.02,
+	cuePositionName: "109"
+}, {
+	cueTime: 57.88,
+	cuePositionName: "110"
+}, {
+	cueTime: 58.46,
+	cuePositionName: "111"
+}, {
+	cueTime: 59.02,
+	cuePositionName: "112"
+}, {
+	cueTime: 59.45,
+	cuePositionName: "113"
+}, {
+	cueTime: 60.02,
+	cuePositionName: "114"
+}];
