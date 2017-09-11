@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 			return;
 		}
 
-		if (transcriptCuesTrack[currentTranscriptIndex] && audio.currentTime >= transcriptCuesTrack[currentTranscriptIndex].cueTime) {
+		while (transcriptCuesTrack[currentTranscriptIndex] && audio.currentTime >= transcriptCuesTrack[currentTranscriptIndex].cueTime) {
 			$(cue_position_selector(transcriptCuesTrack[currentTranscriptIndex].cuePositionName)).forEach(addHighlightClass);
 			currentTranscriptIndex++;
 		}
