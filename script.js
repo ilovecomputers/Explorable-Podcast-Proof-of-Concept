@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		if (index + 1 === transcriptCuesTrack.length) {
 			return;
 		}
-		var cueDuration = transcriptCuesTrack[index + 1] - cue;
+		var cueDuration = transcriptCuesTrack[index + 1].cueTime - cue.cueTime;
 		if (cueDuration < MAX_TRANSITION_TIME) {
-			$(cue_position_selector(index)).forEach(function (cueElement) {
+			$(cue_position_selector(cue.cuePositionName)).forEach(function (cueElement) {
 				cueElement.style.transitionDuration = cueDuration + "s";
 			});
 		}
