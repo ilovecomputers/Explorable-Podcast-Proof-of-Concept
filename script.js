@@ -16,7 +16,21 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 	});
 
-	$('article').on('click', function playAudio() {
+	$('article').on('click', function playFromCue(event) {
+		var target = event.target;
+		var cuePositionName = target.dataset.cuePosition;
+		if (cuePositionName) {
+			playAudio(transcriptCuesTrack.filter(function (cueTrack) {
+				return cueTrack.cuePositionName.localeCompare(cuePositionName) === 0;
+			})[0].cueTime);
+		}
+	});
+	audio.on('ended', resetPlayer);
+
+	function playAudio(startTime) {
+		if (startTime) {
+			audio.currentTime = startTime;
+		}
 		if (audio.paused || audio.ended) {
 			audio.play().then(function () {
 				requestAnimationFrame(updateHighlight);
@@ -25,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 			audio.pause();
 			resetPlayer();
 		}
-	});
-	audio.on('ended', resetPlayer);
+	}
 
 	var currentTranscriptIndex = 0;
 	var HIGHLIGHTED_CLASS = "highlighted";
