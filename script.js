@@ -1,16 +1,16 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', function initializePage() {
-	'use strict';
 
 	var audio = document.getElementById('excerpt');
 	var MAX_TRANSITION_TIME = 0.4; //make sure transition time matches in index.html's styling
 
-	transcriptCuesTrack.forEach(function setTransitionTimes(cue, index) {
-		if (index + 1 === transcriptCuesTrack.length) {
+	cuesTrack.forEach(function setShortTransitionTimes(cue, index) {
+		if (index + 1 === cuesTrack.length) {
 			return;
 		}
-		var cueDuration = transcriptCuesTrack[index + 1].cueTime - cue.cueTime;
+		var cueDuration = cuesTrack[index + 1].cueTime - cue.cueTime;
 		if (cueDuration < MAX_TRANSITION_TIME) {
-			$(cue_position_selector(cue.cuePositionName)).forEach(function (cueElement) {
+			$(cuePositionSelector(cue.cuePositionName)).forEach(function (cueElement) {
 				cueElement.style.transitionDuration = cueDuration + "s";
 			});
 		}
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		var target = event.target;
 		var cuePositionName = target.dataset.cuePosition;
 		if (cuePositionName) {
-			playAudio(transcriptCuesTrack.filter(function (cueTrack) {
+			playAudio(cuesTrack.filter(function (cueTrack) {
 				return cueTrack.cuePositionName.localeCompare(cuePositionName) === 0;
 			})[0].cueTime);
 		}
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 	}
 
-	var currentTranscriptIndex = 0;
+	var cuePosition = 0;
 	var HIGHLIGHTED_CLASS = "highlighted";
 
 	function updateHighlight() {
@@ -49,15 +49,19 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 			return;
 		}
 
-		while (transcriptCuesTrack[currentTranscriptIndex] && audio.currentTime >= transcriptCuesTrack[currentTranscriptIndex].cueTime) {
-			$(cue_position_selector(transcriptCuesTrack[currentTranscriptIndex].cuePositionName)).forEach(addHighlightClass);
-			currentTranscriptIndex++;
+		while (cuesLeftToHighlight()) {
+			$(cuePositionSelector(cuesTrack[cuePosition].cuePositionName)).forEach(addHighlightClass);
+			cuePosition++;
 		}
 
 		requestAnimationFrame(updateHighlight);
+
+		function cuesLeftToHighlight() {
+			return cuesTrack[cuePosition] && audio.currentTime >= cuesTrack[cuePosition].cueTime;
+		}
 	}
 
-	function cue_position_selector(id) {
+	function cuePositionSelector(id) {
 		return "[data-cue-position='" + id + "']"
 	}
 
@@ -67,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 
 	function resetPlayer() {
 		audio.currentTime = 0;
-		currentTranscriptIndex = 0;
+		cuePosition = 0;
 		$("." + HIGHLIGHTED_CLASS).forEach(function removeHighlightClass(highlightedElement) {
 			highlightedElement.classList.remove(HIGHLIGHTED_CLASS);
 		});

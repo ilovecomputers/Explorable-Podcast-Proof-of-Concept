@@ -1,4 +1,4 @@
-var transcriptCuesTrack = [{
+var cuesTrack = [{
 	cueTime: 0.33,
 	cuePositionName: "0"
 }, {
