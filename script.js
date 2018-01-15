@@ -2,17 +2,22 @@
 document.addEventListener('DOMContentLoaded', function initializePage() {
 
 	var audio = document.getElementById('excerpt');
-	var MAX_TRANSITION_TIME = 0.4; //make sure transition time matches in index.html's styling
 
+	// Ideally these transitions are applied directly to html
+	var MAX_TRANSITION_TIME = 0.4; //make sure transition time matches in index.html's styling
 	cuesTrack.forEach(function setShortTransitionTimes(cue, index) {
 		if (index + 1 === cuesTrack.length) {
 			return;
 		}
 		var cueDuration = cuesTrack[index + 1].startTime - cue.startTime;
 		if (cueDuration < MAX_TRANSITION_TIME) {
-			$(cuePositionSelector(cue.cuePositionName)).forEach(function (cueElement) {
-				cueElement.style.transitionDuration = cueDuration + "s";
-			});
+			$(cuePositionSelector(cue.cuePositionName))
+				.filter(function applyOnlyToTextToPreventGlitch(cueElement) {
+					return cueElement.tagName.toLowerCase() === "span";
+				})
+				.forEach(function setShortTransitionTimes(cueElement) {
+					cueElement.style.transitionDuration = cueDuration + "s";
+				});
 		}
 	});
 
