@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		if (index + 1 === cuesTrack.length) {
 			return;
 		}
-		var cueDuration = cuesTrack[index + 1].cueTime - cue.cueTime;
+		var cueDuration = cuesTrack[index + 1].startTime - cue.startTime;
 		if (cueDuration < MAX_TRANSITION_TIME) {
 			$(cuePositionSelector(cue.cuePositionName)).forEach(function (cueElement) {
 				cueElement.style.transitionDuration = cueDuration + "s";
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		if (cuePositionName) {
 			playAudio(cuesTrack.filter(function (cueTrack) {
 				return cueTrack.cuePositionName.localeCompare(cuePositionName) === 0;
-			})[0].cueTime);
+			})[0].startTime);
 		}
 	});
 	audio.on('ended', resetPlayer);
@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 	}
 
-	var cuePosition = 0;
+	var cueHighlightPosition = 0;
+	var cueDullPosition = 0;
 	var HIGHLIGHTED_CLASS = "highlighted";
 
 	function updateHighlight() {
@@ -50,14 +51,23 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 
 		while (cuesLeftToHighlight()) {
-			$(cuePositionSelector(cuesTrack[cuePosition].cuePositionName)).forEach(addHighlightClass);
-			cuePosition++;
+			$(cuePositionSelector(cuesTrack[cueHighlightPosition].cuePositionName)).forEach(addHighlightClass);
+			cueHighlightPosition++;
+		}
+
+		while (cuesLeftToDull()) {
+			$(cuePositionSelector(cuesTrackByEndTime[cueDullPosition].cuePositionName)).forEach(removeHighlightClass);
+			cueDullPosition++;
 		}
 
 		requestAnimationFrame(updateHighlight);
 
 		function cuesLeftToHighlight() {
-			return cuesTrack[cuePosition] && audio.currentTime >= cuesTrack[cuePosition].cueTime;
+			return cuesTrack[cueHighlightPosition] && audio.currentTime >= cuesTrack[cueHighlightPosition].startTime;
+		}
+
+		function cuesLeftToDull() {
+			return cuesTrackByEndTime[cueDullPosition] && audio.currentTime >= cuesTrackByEndTime[cueDullPosition].endTime;
 		}
 	}
 
@@ -69,12 +79,15 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		$cueElement.classList.add(HIGHLIGHTED_CLASS);
 	}
 
+	function removeHighlightClass(highlightedElement) {
+		highlightedElement.classList.remove(HIGHLIGHTED_CLASS);
+	}
+
 	function resetPlayer() {
 		audio.currentTime = 0;
-		cuePosition = 0;
-		$("." + HIGHLIGHTED_CLASS).forEach(function removeHighlightClass(highlightedElement) {
-			highlightedElement.classList.remove(HIGHLIGHTED_CLASS);
-		});
+		cueHighlightPosition = 0;
+		cueDullPosition = 0;
+		$("." + HIGHLIGHTED_CLASS).forEach(removeHighlightClass);
 	}
 
 }, false);

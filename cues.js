@@ -1,367 +1,389 @@
 var cuesTrack = [{
-	cueTime: 0.33,
+	startTime: 0.33,
 	cuePositionName: "0"
 }, {
-	cueTime: 0.57,
+	startTime: 0.57,
 	cuePositionName: "1"
 }, {
-	cueTime: 0.71,
+	startTime: 0.71,
 	cuePositionName: "2"
 }, {
-	cueTime: 1.38,
+	startTime: 1.38,
 	cuePositionName: "3"
 }, {
-	cueTime: 2.17,
+	startTime: 2.17,
 	cuePositionName: "4"
 }, {
-	cueTime: 2.36,
+	startTime: 2.36,
 	cuePositionName: "5"
 }, {
-	cueTime: 2.64,
+	startTime: 2.64,
 	cuePositionName: "6"
 }, {
-	cueTime: 3.88,
+	startTime: 3.88,
 	cuePositionName: "7"
 }, {
-	cueTime: 4.02,
+	startTime: 4.02,
 	cuePositionName: "8"
 }, {
-	cueTime: 4.32,
+	startTime: 4.32,
 	cuePositionName: "9"
 }, {
-	cueTime: 4.65,
+	startTime: 4.65,
 	cuePositionName: "10"
 }, {
-	cueTime: 5.1,
+	startTime: 5.1,
 	cuePositionName: "11"
 }, {
-	cueTime: 5.27,
+	startTime: 5.27,
 	cuePositionName: "12"
 }, {
-	cueTime: 5.52,
+	startTime: 5.52,
 	cuePositionName: "13"
 }, {
-	cueTime: 5.92,
+	startTime: 5.92,
 	cuePositionName: "14"
 }, {
-	cueTime: 6.28,
+	startTime: 6.28,
 	cuePositionName: "15"
 }, {
-	cueTime: 6.55,
+	startTime: 6.55,
 	cuePositionName: "16"
 }, {
-	cueTime: 7.37,
+	startTime: 7.37,
 	cuePositionName: "17"
 }, {
-	cueTime: 8.62,
+	startTime: 8.62,
 	cuePositionName: "18"
 }, {
-	cueTime: 9.48,
+	startTime: 9.48,
 	cuePositionName: "19"
 }, {
-	cueTime: 10.09,
+	startTime: 10.09,
 	cuePositionName: "20"
 }, {
-	cueTime: 10.36,
+	startTime: 10.36,
 	cuePositionName: "21"
 }, {
-	cueTime: 11.01,
+	startTime: 11.01,
 	cuePositionName: "22"
 }, {
-	cueTime: 11.82,
+	startTime: 11.82,
 	cuePositionName: "23"
 }, {
-	cueTime: 12.32,
+	startTime: 12.32,
 	cuePositionName: "24"
 }, {
-	cueTime: 13.15,
+	startTime: 13.15,
 	cuePositionName: "25"
 }, {
-	cueTime: 13.72,
+	startTime: 13.72,
 	cuePositionName: "26"
 }, {
-	cueTime: 14.01,
+	startTime: 14.01,
 	cuePositionName: "27"
 }, {
-	cueTime: 14.19,
+	startTime: 14.19,
 	cuePositionName: "28"
 }, {
-	cueTime: 14.65,
+	startTime: 14.65,
 	cuePositionName: "29"
 }, {
-	cueTime: 15.03,
+	startTime: 15.03,
 	cuePositionName: "30"
 }, {
-	cueTime: 15.37,
+	startTime: 15.37,
 	cuePositionName: "31"
 }, {
-	cueTime: 15.72,
+	startTime: 15.72,
 	cuePositionName: "32"
 }, {
-	cueTime: 16.14,
+	startTime: 16.14,
 	cuePositionName: "33"
 }, {
-	cueTime: 16.44,
+	startTime: 16.44,
 	cuePositionName: "34"
 }, {
-	cueTime: 16.74,
+	startTime: 16.74,
 	cuePositionName: "35"
 }, {
-	cueTime: 17.53,
+	startTime: 17.53,
 	cuePositionName: "36"
 }, {
-	cueTime: 17.91,
+	startTime: 17.91,
 	cuePositionName: "37"
 }, {
-	cueTime: 18.23,
+	startTime: 18.23,
 	cuePositionName: "38"
 }, {
-	cueTime: 18.9,
+	startTime: 18.9,
 	cuePositionName: "39"
 }, {
-	cueTime: 19.16,
+	startTime: 19.16,
 	cuePositionName: "40"
 }, {
-	cueTime: 19.52,
+	startTime: 19.52,
 	cuePositionName: "41"
 }, {
-	cueTime: 20.02,
+	startTime: 20.02,
 	cuePositionName: "42"
 }, {
-	cueTime: 21.29,
+	startTime: 21.29,
 	cuePositionName: "43"
 }, {
-	cueTime: 21.65,
+	startTime: 21.65,
 	cuePositionName: "44"
 }, {
-	cueTime: 21.94,
+	startTime: 21.94,
 	cuePositionName: "45"
 }, {
-	cueTime: 22.46,
+	startTime: 22.46,
 	cuePositionName: "46"
 }, {
-	cueTime: 23.28,
+	startTime: 23.28,
 	cuePositionName: "47"
 }, {
-	cueTime: 23.63,
+	startTime: 23.63,
 	cuePositionName: "48"
 }, {
-	cueTime: 23.88,
+	startTime: 23.88,
 	cuePositionName: "49"
 }, {
-	cueTime: 24.46,
+	startTime: 24.46,
 	cuePositionName: "50"
 }, {
-	cueTime: 24.75,
+	startTime: 24.75,
 	cuePositionName: "51"
 }, {
-	cueTime: 25.09,
+	startTime: 25.09,
 	cuePositionName: "52"
 }, {
-	cueTime: 25.59,
+	startTime: 25.59,
 	cuePositionName: "53"
 }, {
-	cueTime: 26.0,
+	startTime: 26.0,
 	cuePositionName: "54"
 }, {
-	cueTime: 26.48,
+	startTime: 26.48,
 	cuePositionName: "55"
 }, {
-	cueTime: 26.96,
+	startTime: 26.96,
 	cuePositionName: "56"
 }, {
-	cueTime: 27.26,
+	startTime: 27.26,
 	cuePositionName: "57"
 }, {
-	cueTime: 27.77,
+	startTime: 27.77,
 	cuePositionName: "58"
 }, {
-	cueTime: 28.21,
+	startTime: 28.21,
 	cuePositionName: "59"
 }, {
-	cueTime: 28.74,
+	startTime: 28.74,
 	cuePositionName: "60"
 }, {
-	cueTime: 29.58,
+	startTime: 29.58,
 	cuePositionName: "61"
 }, {
-	cueTime: 30.8,
+	startTime: 30.8,
 	cuePositionName: "62"
 }, {
-	cueTime: 31.58,
+	startTime: 31.58,
 	cuePositionName: "63"
 }, {
-	cueTime: 32.4,
+	startTime: 32.4,
 	cuePositionName: "64"
 }, {
-	cueTime: 32.77,
+	startTime: 32.77,
 	cuePositionName: "65"
 }, {
-	cueTime: 33.09,
+	startTime: 33.09,
 	cuePositionName: "66"
 }, {
-	cueTime: 33.82,
+	startTime: 33.82,
 	cuePositionName: "67"
 }, {
-	cueTime: 34.44,
+	startTime: 34.44,
 	cuePositionName: "68"
 }, {
-	cueTime: 34.68,
+	startTime: 34.68,
 	cuePositionName: "69"
 }, {
-	cueTime: 35.39,
+	startTime: 35.39,
 	cuePositionName: "70"
 }, {
-	cueTime: 35.89,
+	startTime: 35.89,
 	cuePositionName: "71"
 }, {
-	cueTime: 36.28,
+	startTime: 36.28,
 	cuePositionName: "72"
 }, {
-	cueTime: 37.03,
+	startTime: 37.03,
 	cuePositionName: "73"
 }, {
-	cueTime: 37.47,
+	startTime: 37.47,
 	cuePositionName: "74"
 }, {
-	cueTime: 37.97,
+	startTime: 37.97,
 	cuePositionName: "75"
 }, {
-	cueTime: 38.23,
+	startTime: 38.23,
 	cuePositionName: "76"
 }, {
-	cueTime: 38.63,
+	startTime: 38.63,
 	cuePositionName: "77"
 }, {
-	cueTime: 39.92,
+	startTime: 39.92,
 	cuePositionName: "78"
 }, {
-	cueTime: 40.18,
+	startTime: 40.18,
 	cuePositionName: "79"
 }, {
-	cueTime: 41.08,
+	startTime: 41.08,
 	cuePositionName: "80"
 }, {
-	cueTime: 42.11,
+	startTime: 42.11,
 	cuePositionName: "81"
 }, {
-	cueTime: 43.16,
+	startTime: 43.16,
 	cuePositionName: "82"
 }, {
-	cueTime: 43.16,
+	startTime: 43.16,
+	movieClip: "flag",
 	cuePositionName: "flag"
 }, {
-	cueTime: 43.64,
+	startTime: 43.64,
 	cuePositionName: "83"
 }, {
-	cueTime: 44.27,
+	startTime: 44.27,
 	cuePositionName: "84"
 }, {
-	cueTime: 44.37,
+	startTime: 44.37,
+	movieClip: "flag",
 	cuePositionName: "topWipe"
 }, {
-	cueTime: 45.1,
+	startTime: 45.1,
 	cuePositionName: "85"
 }, {
-	cueTime: 45.14,
+	startTime: 45.14,
+	movieClip: "flag",
 	cuePositionName: "bottomWipe"
 }, {
-	cueTime: 45.45,
+	startTime: 45.45,
 	cuePositionName: "86"
 }, {
-	cueTime: 46.09,
+	startTime: 46.09,
 	cuePositionName: "87"
 }, {
-	cueTime: 46.6,
+	startTime: 46.6,
 	cuePositionName: "88"
 }, {
-	cueTime: 46.87,
+	startTime: 46.87,
 	cuePositionName: "89"
 }, {
-	cueTime: 47.23,
+	startTime: 47.23,
 	cuePositionName: "90"
 }, {
-	cueTime: 48.06,
+	startTime: 48.06,
 	cuePositionName: "91"
 }, {
-	cueTime: 48.37,
+	startTime: 48.37,
 	cuePositionName: "92"
 }, {
-	cueTime: 48.91,
+	startTime: 48.91,
 	cuePositionName: "93"
 }, {
-	cueTime: 49,
+	startTime: 49,
+	movieClip: "flag",
 	cuePositionName: "firstStar"
 }, {
-	cueTime: 49.25,
+	startTime: 49.25,
+	movieClip: "flag",
 	cuePositionName: "secondStar"
 }, {
-	cueTime: 49.32,
+	startTime: 49.32,
 	cuePositionName: "94"
 }, {
-	cueTime: 49.50,
+	startTime: 49.50,
+	movieClip: "flag",
 	cuePositionName: "thirdStar"
 }, {
-	cueTime: 49.75,
+	startTime: 49.75,
+	movieClip: "flag",
 	cuePositionName: "fourthStar"
 }, {
-	cueTime: 49.76,
+	startTime: 49.76,
 	cuePositionName: "95"
 }, {
-	cueTime: 50.16,
+	startTime: 50.16,
 	cuePositionName: "96"
 }, {
-	cueTime: 50.52,
+	startTime: 50.52,
 	cuePositionName: "97"
 }, {
-	cueTime: 50.76,
+	startTime: 50.76,
 	cuePositionName: "98"
 }, {
-	cueTime: 51.04,
+	startTime: 51.04,
 	cuePositionName: "99"
 }, {
-	cueTime: 51.7,
+	startTime: 51.7,
 	cuePositionName: "100"
 }, {
-	cueTime: 52.44,
+	startTime: 52.44,
 	cuePositionName: "101"
 }, {
-	cueTime: 53.38,
+	startTime: 53.38,
 	cuePositionName: "102"
 }, {
-	cueTime: 54.3,
+	startTime: 54.3,
 	cuePositionName: "103"
 }, {
-	cueTime: 54.58,
+	startTime: 54.58,
 	cuePositionName: "104"
 }, {
-	cueTime: 55.04,
+	startTime: 55.04,
 	cuePositionName: "105"
 }, {
-	cueTime: 55.71,
+	startTime: 55.71,
 	cuePositionName: "106"
 }, {
-	cueTime: 56.16,
+	startTime: 56.16,
 	cuePositionName: "107"
 }, {
-	cueTime: 56.49,
+	startTime: 56.49,
 	cuePositionName: "108"
 }, {
-	cueTime: 57.02,
+	startTime: 57.02,
 	cuePositionName: "109"
 }, {
-	cueTime: 57.88,
+	startTime: 57.88,
 	cuePositionName: "110"
 }, {
-	cueTime: 58.46,
+	startTime: 58.46,
 	cuePositionName: "111"
 }, {
-	cueTime: 59.02,
+	startTime: 59.02,
 	cuePositionName: "112"
 }, {
-	cueTime: 59.45,
+	startTime: 59.45,
 	cuePositionName: "113"
 }, {
-	cueTime: 60.02,
+	startTime: 60.02,
 	cuePositionName: "114"
 }];
+
+var HIGHLIGHT_DURATION = 2;
+var cuesTrackByEndTime = cuesTrack
+	.map(function createEndTime(cue) {
+		var startTime = cue.startTime;
+		if (cue.movieClip === "flag") {
+			startTime = 49.75;
+		}
+		cue.endTime = startTime + HIGHLIGHT_DURATION;
+		return cue;
+	})
+	.sort(function sortByEndTime(rightCue, leftCue) {
+		return rightCue.endTime - leftCue.endTime;
+	})
+;
