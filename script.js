@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 
 	// Ideally these transitions are applied directly to html
 	var MAX_TRANSITION_TIME = 0.4; //make sure transition time matches in index.html's styling
-	cuesTrack.forEach(function setShortTransitionTimes(cue, index) {
+	cuesTrack
+		.filter(function isNotMovieClip(cue) { return !cue.movieClip; })
+		.forEach(function setShortTransitionTimes(cue, index, cuesTrack) {
 		if (index + 1 === cuesTrack.length) {
 			return;
 		}
