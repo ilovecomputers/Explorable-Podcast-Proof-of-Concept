@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 			});
 		} else {
 			audio.pause();
-			resetPlayer();
+			requestAnimationFrame(resetPlayer);
 		}
 	}
 
@@ -93,6 +93,17 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		cueHighlightPosition = 0;
 		cueDullPosition = 0;
 		$("." + HIGHLIGHTED_CLASS).forEach(removeHighlightClass);
+		resetSVGTransforms();
+	}
+
+	// Doing this cause of a Safari bug: https://bugs.webkit.org/show_bug.cgi?id=183433
+	function resetSVGTransforms() {
+		Array.from($('svg')[0].children).forEach(function applyTransform(element) {
+			element.style.transform = "scale(1)";
+			requestAnimationFrame(function removeTransform() {
+				element.style.transform = "";
+			})
+		})
 	}
 
 }, false);
