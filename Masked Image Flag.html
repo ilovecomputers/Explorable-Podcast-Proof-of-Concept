@@ -14,6 +14,14 @@
             cursor: pointer;
         }
 
+        #flag:hover .water {
+            animation: 1s fade;
+            opacity: 1;
+        }
+        #flag .water {
+            transition: 0.25s ease-out;
+            opacity: 0;
+        }
         #flag:hover image.waterBottomRight:nth-child(odd) {
             animation: 0.5s moveWaterToTopLeft linear infinite alternate;
         }
@@ -32,13 +40,23 @@
         }
 
         #flag:hover .star+g image {
-            animation: 1s moveStar;
+            animation: 1s;
+            animation-name: moveStar, fade;
             opacity: 1;
+        }
+        #flag .star+g image {
+            transition: 0.25s ease-out;
+            opacity: 0;
         }
         @keyframes moveStar {
             from {
-                opacity: 0;
                 transform: scale3d(0.85, 0.85, 0.85) translate3d(130px, 82px, 0px);
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
             }
             to {
                 opacity: 1;
@@ -70,49 +88,53 @@
     </defs>
     <path d="M0,0l720,0l0,480l-720,0l0,-480Z" style="fill:#fff;fill-rule:nonzero;"></path>
     <rect x="0" y="80" width="720" height="80" style="fill:#b3ddf2;"></rect>
-    <g clip-path="url(#topFlagBar)">
-        <image href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-315" y="-3.5"></image>
-    </g>
-    <g clip-path="url(#topFlagBar)">
-        <image class="waterTopLeft" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-320" y="-8.5" opacity="0.5"></image>
-    </g>
-    <g clip-path="url(#topFlagBar)">
-        <image class="waterBottomRight" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-310" y="2.5" opacity="0.5"></image>
+    <g class="water">
+        <g clip-path="url(#topFlagBar)">
+            <image href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-315" y="-3.5"></image>
+        </g>
+        <g clip-path="url(#topFlagBar)">
+            <image class="waterTopLeft" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-320" y="-8.5" opacity="0.5"></image>
+        </g>
+        <g clip-path="url(#topFlagBar)">
+            <image class="waterBottomRight" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-310" y="2.5" opacity="0.5"></image>
+        </g>
     </g>
     <rect class="wipes" x="0" y="75" width="720" height="90" style="fill:#FFF;"></rect>
     <rect x="0" y="320" width="720" height="80" style="fill:#b3ddf2;"></rect>
-    <g clip-path="url(#bottomFlagBar)">
-        <image class="water" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-315" y="236.5"></image>
-    </g>
-    <g clip-path="url(#bottomFlagBar)">
-        <image class="waterBottomRight" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-310" y="231.5" opacity="0.5"></image>
-    </g>
-    <g clip-path="url(#bottomFlagBar)">
-        <image class="waterTopLeft" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-320" y="241.5" opacity="0.5"></image>
+    <g class="water">
+        <g clip-path="url(#bottomFlagBar)">
+            <image class="water" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-315" y="236.5"></image>
+        </g>
+        <g clip-path="url(#bottomFlagBar)">
+            <image class="waterBottomRight" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-310" y="231.5" opacity="0.5"></image>
+        </g>
+        <g clip-path="url(#bottomFlagBar)">
+            <image class="waterTopLeft" href="image/Chicago River.png" xlink:href="image/Chicago River.png" width="1350" height="247" x="-320" y="241.5" opacity="0.5"></image>
+        </g>
     </g>
     <rect class="wipes" x="0" y="315" width="720" height="90" style="fill:#FFF;"></rect>
     <a href="https://en.wikipedia.org/wiki/Fort_Dearborn">
         <path class="star" d="M150,180l11,41l41,-11l-30,30l30,30l-41,-11l-11,41l-11,-41l-41,11l30,-30l-30,-30l41,11l11,-41Z" style="fill:#f00;fill-rule:nonzero;"></path>
         <g clip-path="url(#firstStar)">
-            <image href="image/Fort_Dearborn_1831_Kinzie.jpg" xlink:href="image/Fort_Dearborn_1831_Kinzie.jpg" width="400" height="233" x="-20" y="130" opacity="0"></image>
+            <image href="image/Fort_Dearborn_1831_Kinzie.jpg" xlink:href="image/Fort_Dearborn_1831_Kinzie.jpg" width="400" height="233" x="-20" y="130"></image>
         </g>
     </a>
     <a href="https://en.wikipedia.org/wiki/Great_Chicago_Fire">
         <path class="star" d="M290,180l11,41l41,-11l-30,30l30,30l-41,-11l-11,41l-11,-41l-41,11l30,-30l-30,-30l41,11l11,-41Z" style="fill:#f00;fill-rule:nonzero;"></path>
         <g clip-path="url(#secondStar)">
-            <image href="image/Chicago_in_Flames_by_Currier_&_Ives,_1871.jpg" xlink:href="image/Chicago_in_Flames_by_Currier_&_Ives,_1871.jpg" width="400" height="269" x="-6" y="130" opacity="0"></image>
+            <image href="image/Chicago_in_Flames_by_Currier_&_Ives,_1871.jpg" xlink:href="image/Chicago_in_Flames_by_Currier_&_Ives,_1871.jpg" width="400" height="269" x="-6" y="130"></image>
         </g>
     </a>
     <a href="https://en.wikipedia.org/wiki/World%27s_Columbian_Exposition">
         <path class="star" d="M430,180l11,41l41,-11l-30,30l30,30l-41,-11l-11,41l-11,-41l-41,11l30,-30l-30,-30l41,11l11,-41Z" style="fill:#f00;fill-rule:nonzero;"></path>
         <g clip-path="url(#thirdStar)">
-            <image href="image/Brooklyn_Museum_-_Chicago_World's_Fair_-_Thomas_Moran_-_overall.jpg" xlink:href="image/Brooklyn_Museum_-_Chicago_World's_Fair_-_Thomas_Moran_-_overall.jpg" width="400" height="535" x="240" y="-60" opacity="0"></image>
+            <image href="image/Brooklyn_Museum_-_Chicago_World's_Fair_-_Thomas_Moran_-_overall.jpg" xlink:href="image/Brooklyn_Museum_-_Chicago_World's_Fair_-_Thomas_Moran_-_overall.jpg" width="400" height="535" x="240" y="-60"></image>
         </g>
     </a>
     <a href="https://en.wikipedia.org/wiki/Century_of_Progress">
         <path class="star" d="M570,180l11,41l41,-11l-30,30l30,30l-41,-11l-11,41l-11,-41l-41,11l30,-30l-30,-30l41,11l11,-41Z" style="fill:#f00;fill-rule:nonzero;"></path>
         <g clip-path="url(#fourthStar)">
-            <image href="image/Chicago_world's_fair,_a_century_of_progress,_expo_poster.jpg" xlink:href="image/Chicago_world's_fair,_a_century_of_progress,_expo_poster.jpg" width="301" height="449" x="420" y="165" opacity="0"></image>
+            <image href="image/Chicago_world's_fair,_a_century_of_progress,_expo_poster.jpg" xlink:href="image/Chicago_world's_fair,_a_century_of_progress,_expo_poster.jpg" width="301" height="449" x="420" y="165"></image>
         </g>
     </a>
 </svg>
