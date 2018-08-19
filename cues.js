@@ -330,8 +330,16 @@ var cuesTrack = [{
 	startTime: 51.7,
 	cuePositionName: "100"
 }, {
+	startTime: 51.7,
+	movieClip: "flagSymbols",
+	cuePositionName: "flagSymbols"
+}, {
 	startTime: 52.44,
 	cuePositionName: "101"
+}, {
+	startTime: 52.44,
+	movieClip: "flagSymbols",
+	cuePositionName: "water"
 }, {
 	startTime: 53.38,
 	cuePositionName: "102"
@@ -351,11 +359,27 @@ var cuesTrack = [{
 	startTime: 56.16,
 	cuePositionName: "107"
 }, {
+	startTime: 56.16,
+	movieClip: "flagSymbols",
+	cuePositionName: "firstMaskedStar"
+}, {
 	startTime: 56.49,
 	cuePositionName: "108"
 }, {
+	startTime: 56.66,
+	movieClip: "flagSymbols",
+	cuePositionName: "secondMaskedStar"
+}, {
 	startTime: 57.02,
 	cuePositionName: "109"
+}, {
+	startTime: 57.16,
+	movieClip: "flagSymbols",
+	cuePositionName: "thirdMaskedStar"
+}, {
+	startTime: 57.66,
+	movieClip: "flagSymbols",
+	cuePositionName: "fourthMaskedStar"
 }, {
 	startTime: 57.88,
 	cuePositionName: "110"
@@ -379,6 +403,8 @@ var cuesTrackByEndTime = cuesTrack
 		var startTime = cue.startTime;
 		if (cue.movieClip === "flag") {
 			startTime = 49.75;
+		} else if (cue.movieClip === "flagSymbols") {
+			startTime = 60.02;
 		}
 		cue.endTime = startTime + HIGHLIGHT_DURATION;
 		return cue;

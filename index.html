@@ -142,13 +142,15 @@
         }
 
         [data-cue-position="flag"]:hover .water,
-        [data-cue-position="water"].highlighted {
+        [data-cue-position="water"].highlighted,
+        [data-cue-position="water"].highlighted .water {
             animation: 1s fade;
             opacity: 1;
         }
 
         [data-cue-position="flag"].highlighted:hover .water,
-        [data-cue-position="flagSymbols"].highlighted .water {
+        [data-cue-position="flagSymbols"].highlighted:hover [data-cue-position="water"]:not(.highlighted) .water,
+        [data-cue-position="flagSymbols"].highlighted:hover [data-cue-position="water"]:not(.highlighted) {
             opacity: 0;
             animation: none;
         }
@@ -189,7 +191,10 @@
         }
 
         [data-cue-position="flag"].highlighted:hover .star + g image,
-        [data-cue-position="flagSymbols"].highlighted .star + g image {
+        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="firstMaskedStar"]:not(.highlighted) image,
+        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="secondMaskedStar"]:not(.highlighted) image,
+        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="thirdMaskedStar"]:not(.highlighted) image,
+        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="fourthMaskedStar"]:not(.highlighted) image {
             opacity: 0;
             animation: none;
         }
