@@ -100,12 +100,15 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 
 	// Doing this cause of a Safari bug: https://bugs.webkit.org/show_bug.cgi?id=183433
 	function resetSVGTransforms() {
-		Array.from($('svg')[0].children).forEach(function applyTransform(element) {
-			element.style.transform = "scale(1)";
-			requestAnimationFrame(function removeTransform() {
-				element.style.transform = "";
+		$('svg').forEach(function resetSVGTransform(svg) {
+			Array.from(svg.children).forEach(function applyTransform(element) {
+				element.style.transform = "scale(1)";
+				requestAnimationFrame(function removeTransform() {
+					element.style.transform = "";
+				})
 			})
-		})
+
+		});
 	}
 
 }, false);
