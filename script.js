@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 	// Ideally these transitions are applied directly to html
 	var MAX_TRANSITION_TIME = 0.4; //make sure transition time matches in index.html's styling
 	cuesTrack
-		.filter(function isNotMovieClip(cue) { return !cue.movieClip; })
+		.filter(function isTextHighlight(cue) { return cue.isTextHighlight; })
 		.forEach(function setShortTransitionTimes(cue, index, cuesTrack) {
 		if (index + 1 === cuesTrack.length) {
 			return;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 
 		while (cuesLeftToDull()) {
-			$(cuePositionSelector(cuesTrackByEndTime[cueDullPosition].cuePositionName)).forEach(removeHighlightClass);
+			$(cuePositionSelector(cuesTrack[cueDullPosition].cuePositionName)).forEach(removeHighlightClass);
 			cueDullPosition++;
 		}
 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 
 		function cuesLeftToDull() {
-			return cuesTrackByEndTime[cueDullPosition] && audio.currentTime >= cuesTrackByEndTime[cueDullPosition].endTime;
+			return cuesTrack[cueDullPosition] && audio.currentTime >= cuesTrack[cueDullPosition].endTime;
 		}
 	}
 
