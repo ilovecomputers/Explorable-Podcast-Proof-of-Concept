@@ -6,31 +6,45 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 	// Ideally these transitions are applied directly to html
 	var MAX_TRANSITION_TIME = 0.4; //make sure transition time matches in index.html's styling
 	cuesTrack
-		.filter(function isTextHighlight(cue) { return cue.isTextHighlight; })
+		.filter(function isTextHighlight(cue) {
+			return cue.isTextHighlight;
+		})
 		.forEach(function setShortTransitionTimes(cue, index, cuesTrack) {
-		if (index + 1 === cuesTrack.length) {
-			return;
-		}
-		var cueDuration = cuesTrack[index + 1].startTime - cue.startTime;
-		if (cueDuration < MAX_TRANSITION_TIME) {
-			$(cuePositionSelector(cue.cuePositionName))
-				.filter(function applyOnlyToTextToPreventGlitch(cueElement) {
-					return cueElement.tagName.toLowerCase() === "span";
-				})
-				.forEach(function setShortTransitionTimes(cueElement) {
-					cueElement.style.transitionDuration = cueDuration + "s";
-				});
-		}
-	});
+			if (index + 1 === cuesTrack.length) {
+				return;
+			}
+			var cueDuration = cuesTrack[index + 1].startTime - cue.startTime;
+			if (cueDuration < MAX_TRANSITION_TIME) {
+				$(cuePositionSelector(cue.cuePositionName))
+					.filter(function applyOnlyToTextToPreventGlitch(cueElement) {
+						return cueElement.tagName.toLowerCase() === "span";
+					})
+					.forEach(function setShortTransitionTimes(cueElement) {
+						cueElement.style.transitionDuration = cueDuration + "s";
+					});
+			}
+		});
 
 	$('article').on('click', function playFromCue(event) {
 		var target = event.target;
 		var cuePositionName = target.dataset.cuePosition;
-		if (cuePositionName) {
-			playAudio(cuesTrack.filter(function (cueTrack) {
-				return cueTrack.cuePositionName.localeCompare(cuePositionName) === 0;
-			})[0].startTime);
+		if (!cuePositionName) {
+			return;
 		}
+
+		const matchingCue = cuesTrack.find(cueTrack =>
+			cueTrack.cuePositionName.localeCompare(cuePositionName) === 0
+			&& cueTrack.isTextHighlight);
+		if (!matchingCue) {
+			return;
+		}
+
+		const startTime = matchingCue.startTime;
+		if (!Number.isFinite(startTime)) {
+			return;
+		}
+
+		playAudio(startTime);
 	});
 	audio.on('ended', resetPlayer);
 
