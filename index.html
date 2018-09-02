@@ -85,31 +85,31 @@
         }
 
         /* When not animated, white flag wipes should be hidden*/
-        [data-cue-position="flag"] .wipes {
+        svg[data-cue-position="flag"] .wipes {
             opacity: 0;
         }
 
         /* Fade blue stripes to white */
-        [data-cue-position="flag"].highlighted .wipes {
+        svg[data-cue-position="flag"].highlighted .wipes {
             transition: opacity 0.3s ease-in;
             opacity: 1;
         }
 
         /* Wipe them back in */
-        [data-cue-position="flag"].highlighted .wipes.highlighted {
+        svg[data-cue-position="flag"].highlighted .wipes.highlighted {
             transition: transform 0.3s ease;
             transform-origin: right;
             transform: scaleX(0);
         }
 
-        [data-cue-position="flag"].highlighted .star {
+        svg[data-cue-position="flag"].highlighted .star {
             animation-duration: 0.3s;
             animation-name: fadeStarsAndSetUpForFinalTransition;
             transform: scale(2);
             opacity: 0;
         }
 
-        [data-cue-position="flag"].highlighted .star.highlighted {
+        svg[data-cue-position="flag"].highlighted .star.highlighted {
             transition: transform 0.1s ease-in, opacity 0.1s ease-in;
             transform-origin: center;
             opacity: 1;
@@ -139,30 +139,30 @@
             cursor: pointer;
         }
 
-        [data-cue-position="flag"] .water {
+        svg[data-cue-position="flag"] .water {
             transition: 0.25s ease-out;
             opacity: 0;
         }
 
-        [data-cue-position="flag"]:hover .water,
-        [data-cue-position="water"].highlighted,
-        [data-cue-position="water"].highlighted .water {
+        svg[data-cue-position="flag"]:hover .water,
+        g[data-cue-position="water"].highlighted,
+        g[data-cue-position="water"].highlighted .water {
             animation: 1s fade;
             opacity: 1;
         }
 
-        [data-cue-position="flag"].highlighted:hover .water,
-        [data-cue-position="flagSymbols"].highlighted:hover [data-cue-position="water"]:not(.highlighted) .water,
-        [data-cue-position="flagSymbols"].highlighted:hover [data-cue-position="water"]:not(.highlighted) {
+        svg[data-cue-position="flag"].highlighted:hover .water,
+        figure[data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="water"]:not(.highlighted) .water,
+        figure[data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="water"]:not(.highlighted) {
             opacity: 0;
             animation: none;
         }
 
-        [data-cue-position="flag"] image.waterBottomRight:nth-child(odd) {
+        svg[data-cue-position="flag"] image.waterBottomRight:nth-child(odd) {
             animation: 0.5s moveWaterToTopLeft linear infinite alternate;
         }
 
-        [data-cue-position="flag"] image.waterTopLeft:nth-child(odd) {
+        svg[data-cue-position="flag"] image.waterTopLeft:nth-child(odd) {
             animation: 0.5s moveWaterToBottomRight linear infinite alternate;
         }
 
@@ -178,26 +178,26 @@
             }
         }
 
-        [data-cue-position="flag"] .star + g image {
+        svg[data-cue-position="flag"] .star + g image {
             transition: 0.25s ease-out;
             opacity: 0;
         }
 
-        [data-cue-position="flag"]:hover .star + g image,
-        g[data-cue-position="firstMaskedStar"].highlighted image,
-        g[data-cue-position="secondMaskedStar"].highlighted image,
-        g[data-cue-position="thirdMaskedStar"].highlighted image,
-        g[data-cue-position="fourthMaskedStar"].highlighted image {
+        svg[data-cue-position="flag"]:hover .star + g image,
+        svg[data-cue-position="flag"] g[data-cue-position="firstMaskedStar"].highlighted image,
+        svg[data-cue-position="flag"] g[data-cue-position="secondMaskedStar"].highlighted image,
+        svg[data-cue-position="flag"] g[data-cue-position="thirdMaskedStar"].highlighted image,
+        svg[data-cue-position="flag"] g[data-cue-position="fourthMaskedStar"].highlighted image {
             animation: 1s;
             animation-name: moveStar, fade;
             opacity: 1;
         }
 
-        [data-cue-position="flag"].highlighted:hover .star + g image,
-        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="firstMaskedStar"]:not(.highlighted) image,
-        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="secondMaskedStar"]:not(.highlighted) image,
-        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="thirdMaskedStar"]:not(.highlighted) image,
-        [data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="fourthMaskedStar"]:not(.highlighted) image {
+        svg[data-cue-position="flag"].highlighted:hover .star + g image,
+        figure[data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="firstMaskedStar"]:not(.highlighted) image,
+        figure[data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="secondMaskedStar"]:not(.highlighted) image,
+        figure[data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="thirdMaskedStar"]:not(.highlighted) image,
+        figure[data-cue-position="flagSymbols"].highlighted:hover g[data-cue-position="fourthMaskedStar"]:not(.highlighted) image {
             opacity: 0;
             animation: none;
         }
