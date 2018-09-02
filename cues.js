@@ -12,18 +12,6 @@ let cuesTrack = [
 		"isTextHighlight": true
 	},
 	{
-		"startTime": 0.71,
-		"cuePositionName": "2",
-		"endTime": 2.71,
-		"isTextHighlight": true
-	},
-	{
-		"startTime": 1.38,
-		"cuePositionName": "3",
-		"endTime": 3.38,
-		"isTextHighlight": true
-	},
-	{
 		"startTime": 2.17,
 		"cuePositionName": "4",
 		"endTime": 4.17,
