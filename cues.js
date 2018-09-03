@@ -1,38 +1,8 @@
 let cuesTrack = [
 	{
-		"startTime": 0.33,
-		"cuePositionName": "0",
-		"endTime": 2.33,
-		"isTextHighlight": true
-	},
-	{
-		"startTime": 0.57,
-		"cuePositionName": "1",
-		"endTime": 2.57,
-		"isTextHighlight": true
-	},
-	{
-		"startTime": 0.71,
+		"startTime": 0,
 		"cuePositionName": "logo",
 		"endTime": 9.48
-	},
-	{
-		"startTime": 2.17,
-		"cuePositionName": "4",
-		"endTime": 4.17,
-		"isTextHighlight": true
-	},
-	{
-		"startTime": 2.36,
-		"cuePositionName": "5",
-		"endTime": 4.36,
-		"isTextHighlight": true
-	},
-	{
-		"startTime": 2.64,
-		"cuePositionName": "6",
-		"endTime": 4.64,
-		"isTextHighlight": true
 	},
 	{
 		"startTime": 3.88,
