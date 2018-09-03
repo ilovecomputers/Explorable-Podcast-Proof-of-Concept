@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 	var cueHighlightPosition = 0;
 	var cueDullPosition = 0;
 	var HIGHLIGHTED_CLASS = "highlighted";
+	var cuesTrackSortedByEndTime = cuesTrack.slice().sort((a, b) => a.endTime - b.endTime);
 
 	function updateHighlight() {
 		if (audio.paused || audio.ended) {
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 
 		while (cuesLeftToDull()) {
-			$(cuePositionSelector(cuesTrack[cueDullPosition].cuePositionName)).forEach(removeHighlightClass);
+			$(cuePositionSelector(cuesTrackSortedByEndTime[cueDullPosition].cuePositionName)).forEach(removeHighlightClass);
 			cueDullPosition++;
 		}
 
@@ -88,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		}
 
 		function cuesLeftToDull() {
-			return cuesTrack[cueDullPosition] && audio.currentTime >= cuesTrack[cueDullPosition].endTime;
+			return cuesTrackSortedByEndTime[cueDullPosition] && audio.currentTime >= cuesTrackSortedByEndTime[cueDullPosition].endTime;
 		}
 	}
 
