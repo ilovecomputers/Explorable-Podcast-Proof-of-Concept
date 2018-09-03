@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		cueDullPosition = 0;
 		$("." + HIGHLIGHTED_CLASS).forEach(removeHighlightClass);
 		resetSVGTransforms();
+		changePlayButton();
 	}
 
 	// Doing this cause of a Safari bug: https://bugs.webkit.org/show_bug.cgi?id=183433
