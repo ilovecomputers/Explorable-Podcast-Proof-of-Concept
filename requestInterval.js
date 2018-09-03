@@ -9,6 +9,7 @@ window.requestInterval = function (fn, delay) {
 		handle = {};
 
 	function loop(currentTime) {
+		handle.value = requestAnimationFrame(loop);
 		const current = new Date().getTime(),
 			delta = current - start;
 
@@ -16,8 +17,6 @@ window.requestInterval = function (fn, delay) {
 			fn(currentTime);
 			start = new Date().getTime();
 		}
-
-		handle.value = requestAnimationFrame(loop);
 	}
 
 	handle.value = requestAnimationFrame(loop);

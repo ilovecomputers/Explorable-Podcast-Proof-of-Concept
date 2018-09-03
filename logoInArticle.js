@@ -43,7 +43,7 @@
 	}
 
 
-	let intervalHandle;
+	let intervalHandle, cancelled = false;
 
 	function startStopAnimation(squares, mutationList) {
 		const oldValue = mutationList[0].oldValue;
@@ -58,9 +58,7 @@
 			&& oldValue && oldValue.includes(CONSTANTS.HIGHLIGHTED)
 			&& intervalHandle !== undefined) {
 
-			clearRequestInterval(intervalHandle);
-			intervalHandle = undefined;
-			requestAnimationFrame(removeHighlights.bind(null, squares));
+			cancelled = true;
 
 		}
 	}
@@ -70,6 +68,13 @@
 	 * @param {DOMHighResTimeStamp} currentTime
 	 */
 	function animateSquares(squares, currentTime) {
+		if (cancelled) {
+			clearRequestInterval(intervalHandle);
+			intervalHandle = undefined;
+			cancelled = false;
+			requestAnimationFrame(removeHighlights.bind(null, squares));
+			return;
+		}
 		squares.forEach(square => {
 			if (Math.random() < CONSTANTS.CHANCE) {
 				return;
