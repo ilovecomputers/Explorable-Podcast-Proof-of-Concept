@@ -27,13 +27,17 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 
 	$('article').on('click', function playFromCue(event) {
 		var target = event.target;
+		if (target.tagName.toLowerCase() === "button") {
+			playAudio(0);
+		}
+
 		var cuePositionName = target.dataset.cuePosition;
 		if (!cuePositionName) {
 			return;
 		}
 
 		const matchingCue = cuesTrack.find(cueTrack =>
-			cueTrack.cuePositionName.localeCompare(cuePositionName) === 0
+			cueTrack.cuePositionName === cuePositionName
 			&& cueTrack.isTextHighlight);
 		if (!matchingCue) {
 			return;
@@ -59,6 +63,18 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 		} else {
 			audio.pause();
 			requestAnimationFrame(resetPlayer);
+		}
+		changePlayButton();
+	}
+
+	function changePlayButton() {
+		const $button = $('button')[0];
+		if (audio.paused || audio.ended) {
+			$button.textContent = 'Play ▶️ the article from the beginning';
+			$button.nextSibling.textContent = " or click anywhere in the text to start playing from that point.";
+		} else {
+			$button.textContent = 'Stop ⏹ the article';
+			$button.nextSibling.textContent = " or click anywhere in the text to stop playing";
 		}
 	}
 
