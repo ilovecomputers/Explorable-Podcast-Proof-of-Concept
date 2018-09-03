@@ -24,14 +24,13 @@
         }
 
         aside {
-            text-align: center;
             height: 2.5em;
         }
 
         article {
             font-family: 'Open Sans', sans-serif;
             background-color: rgb(255, 233, 125);
-            padding: 0.5em;
+            padding: 2em;
         }
 
         article:after {
@@ -43,19 +42,22 @@
         article header {
             float: left;
             text-align: center;
-            margin: 0 30px;
+            margin: -2em 2em 2em -2em;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
         }
 
         p {
-            font-size: 1.9em;
-            margin: 0;
+            font-size: 1.7em;
         }
 
-        span {
+        span:not([data-highlight="false"]) {
             background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, .12) 50%);
             background-size: 200%;
             transition: background .4s; /* make sure transition time matches MAX_TRANSITION_TIME in script.js */
@@ -83,7 +85,11 @@
             }
 
             h1 {
-                font-size: 1.6em;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
             }
 
             p {
@@ -379,16 +385,14 @@
             <button>Play ▶️ the article from the beginning</button> or click anywhere in the text to start playing from that point.
         </aside>
         <h1>
-            <span data-cue-position="7">The </span>
-            <span data-cue-position="8">five </span>
-            <span data-cue-position="9">basic </span>
-            <span data-cue-position="10">principles </span>
+            <span data-cue-position="8">5 </span>
+            <span data-cue-position="10">Principles </span>
             <span data-cue-position="11">of </span>
-            <span data-cue-position="12">flag </span>
-            <span data-cue-position="13">design </span>
+            <span data-cue-position="12">Flag </span>
+            <span data-cue-position="13">Design </span>
         </h1>
         <p>
-            <span data-cue-position="7">The </span>
+            <span data-cue-position="7" data-highlight="false">There are</span>
             <span data-cue-position="8">five </span>
             <span data-cue-position="9">basic </span>
             <span data-cue-position="10">principles </span>
@@ -399,12 +403,12 @@
             <span data-cue-position="15">to the </span>
             <span data-cue-position="16">North American </span>
             <span data-cue-position="17">Vexillological </span>
-            <span data-cue-position="19">(Vex-</span><span data-cue-position="20">illo-</span><span
+            <span data-cue-position="19">(Vex-il</span><span data-cue-position="20">-lol-</span><span
                 data-cue-position="21">logical. </span>
-            <span data-cue-position="26">It&#39;s the </span>
+            <span data-cue-position="26" data-highlight="false">That</span>
             <span data-cue-position="27">extra </span>
             <span data-cue-position="28">&#39;lol&#39; </span>
-            <span data-cue-position="29">that makes </span>
+            <span data-cue-position="29">makes </span>
             <span data-cue-position="30">it sound </span>
             <span data-cue-position="31">weird) </span>
             <span data-cue-position="18">Association. </span>
@@ -413,12 +417,11 @@
             <span data-cue-position="24">study of </span>
             <span data-cue-position="25">flags. </span>
         </p>
-        <h1>
-            <span data-cue-position="32">Number </span>
-            <span data-cue-position="33">one: </span>
+        <h2>
+            <span data-cue-position="32">#</span><span data-cue-position="33">1: </span>
             <span data-cue-position="34">Keep </span>
-            <span data-cue-position="35">it simple. </span>
-        </h1>
+            <span data-cue-position="35">it simple</span>
+        </h2>
         <p>
             <span data-cue-position="36">The flag </span>
             <span data-cue-position="37">should be </span>
@@ -427,6 +430,8 @@
             <span data-cue-position="40">child </span>
             <span data-cue-position="41">can draw it </span>
             <span data-cue-position="42">from memory. </span>
+        </p>
+        <p>
             <span data-cue-position="43">Before I </span>
             <span data-cue-position="44">moved to </span>
             <span data-cue-position="45">Chicago, </span>
@@ -568,15 +573,15 @@
                     Wikipedia</a>).
             </figcaption>
         </figure>
-        <h1>
-            <span data-cue-position="95">Number </span>
-            <span data-cue-position="96">two: </span>
+        <h2>
+            <span data-cue-position="95">#</span><span data-cue-position="96">2: </span>
             <span data-cue-position="103">Use </span>
             <span data-cue-position="104">meaningful </span>
-            <span data-cue-position="105">symbolism. </span>
-        </h1>
+            <span data-cue-position="105">symbolism</span>
+        </h2>
         <p>
-            <span data-cue-position="97">The </span>
+            <span data-cue-position="97" data-highlight="false">In the Chicago flag, </span>
+            <span data-cue-position="97">the </span>
             <span data-cue-position="98">blue </span>
             <span data-cue-position="99">stripes </span>
             <span data-cue-position="100">represent </span>

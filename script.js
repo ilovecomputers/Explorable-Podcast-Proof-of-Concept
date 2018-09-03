@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function initializePage() {
 	}
 
 	function cuePositionSelector(id) {
-		return "[data-cue-position='" + id + "']"
+		return "[data-cue-position='" + id + "']:not([data-highlight='false'])"
 	}
 
 	function addHighlightClass($cueElement) {
